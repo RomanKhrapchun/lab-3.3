@@ -13,12 +13,15 @@ int main()
     cout << "x = "; cin >> x;
 
     if (x <= 0)
-        y = -x;
+        y = -x + 6;
     else
         if (x > 0 && x <= R)
             y = -sqrt(pow(R,2) - pow(x,2));
+    if (x > R && x < (2 * R))
+            y = sqrt(pow(R,2) - pow((x - 2 * R),2));
         else
-             y = R;
+               if(x > 2 * R)
+               y = R;
 
         cout << endl;
         cout << "y = " << y << endl;
